@@ -1,0 +1,72 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /*
+     * MoMo Blue (#004F71 at momo-800) is the MoMo brand's lead colour, not MTN
+     * corporate yellow. The 2023 MoMo refresh inverted the ratio to roughly
+     * 90% blue and 10% yellow, so blue carries surfaces and yellow is reserved
+     * for the single primary action on a screen.
+     */
+    --color-momo-50: #f0f9fc;
+    --color-momo-100: #d9eff7;
+    --color-momo-200: #b8e1f0;
+    --color-momo-300: #85cce6;
+    --color-momo-400: #4bafd6;
+    --color-momo-500: #2593bd;
+    --color-momo-600: #1a76a0;
+    --color-momo-700: #186082;
+    --color-momo-800: #004f71;
+    --color-momo-900: #0c2b3e;
+    --color-momo-950: #071a26;
+
+    /*
+     * MTN Sunshine Yellow (#FFCB05 at sunshine-400). Always carries black text:
+     * the brand pairing is yellow with black, and it is the only accessible
+     * combination at this luminance.
+     */
+    --color-sunshine-50: #fffceb;
+    --color-sunshine-100: #fff7c6;
+    --color-sunshine-200: #ffee88;
+    --color-sunshine-300: #ffdf4a;
+    --color-sunshine-400: #ffcb05;
+    --color-sunshine-500: #e6b400;
+    --color-sunshine-600: #c29200;
+    --color-sunshine-700: #9a6f02;
+    --color-sunshine-800: #7f570a;
+    --color-sunshine-900: #6c480f;
+    --color-sunshine-950: #3f2605;
+
+    /*
+     * Greys taken from the MoMo developer portal: body copy sits at #4C4C4C
+     * against white cards outlined in #E5E5E5, rather than pure black on grey.
+     */
+    --color-ink-50: #f7f8f9;
+    --color-ink-100: #eef0f2;
+    --color-ink-200: #e5e5e5;
+    --color-ink-300: #cccccc;
+    --color-ink-400: #999999;
+    --color-ink-500: #6b7780;
+    --color-ink-600: #5a5a5a;
+    --color-ink-700: #4c4c4c;
+    --color-ink-800: #3a3a3a;
+    --color-ink-900: #262626;
+    --color-ink-950: #0d1114;
+}
+
+/*
+ * Livewire's wire:navigate bar. Sunshine yellow is the till's only primary
+ * action colour, so the bar matches Pay rather than default blue.
+ */
+html {
+    --livewire-progress-bar-color: #ffcb05;
+}
+
+[x-cloak] {
+    display: none !important;
+}
